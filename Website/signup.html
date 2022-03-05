@@ -1,29 +1,49 @@
 <!DOCTYPE html>
-<head>
-
-    <body> 
+<html lang="en">
+    <title>Sign Up for Quest Ants</title>
+    <meta charset = "utf-8">
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
         <h1> QuestAnts </h1> 
-       
-<form action="Homepage.html" method="get" name ="Form" >
-    <fieldset>
-        <legend>Sign Up </legend>
-        
-        
-             <label for="email">Email</label>
-            <input type="email" id="email" name="email"><br><br>
-              <label for="username">Username</label>
-              <input type="text" id="usrname" name="usrname"  ><br><br>
+        <fieldset>
+            <legend>Sign Up Below</legend>
+            <form method="GET" name="signUpForm" onsubmit="return validateForm()" action="home.html">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required/><br><br>
+
+                <label for="username">Username</label>
+                <input type="text" id="usrname" name="usrname" required/><br><br>
           
-              <label for="passw">Password</label>
-              <input type="password" id="passw" name="psw"  required><br><br>
+                <label for="passw">Password</label>
+                <input type="password" id="passw" name="psw" required/><br><br>
               
-              <label for="confirmPassw"> Verify Password</label>
-              <input type="password" id="confirmPassw" name="Vpsw"required  ><br><br>
+                <label for="confirmPassw"> Verify Password</label>
+                <input type="password" id="confirmPassw" name="vpsw" required/><br><br>
 
-              
+                <input type="submit" name="submit"/>
+            </form>
+        </fieldset>
+        <script type="text/javascript">
+            function validateForm() {
+                var u = document.forms["signUpForm"]["usrname"].value;
+                var p1 = document.forms["signUpForm"]["psw"].value;
+                var p2 = document.forms["signUpForm"]["vpsw"].value;
+                if (u.length < 5) {
+                    alert("Username must be at least 5 characters long.");
+                    return false;
+                }
+                else if (u.length > 25) {
+                    alert("Username must be less than 26 characters long.");
+                    return false;
+                }
 
-
-
-    </fieldset>     
-</form>
-</head>
+                if (p1 != p2) {
+                    alert("Ensure passwords match.");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
