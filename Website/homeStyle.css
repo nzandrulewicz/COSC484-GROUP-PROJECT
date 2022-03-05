@@ -17,19 +17,6 @@ body
     display: flex;
 }
 
-#login
-{
-    flex: 1;
-    text-align: right;
-    padding: 1em;
-}
-
-#signup
-{
-    flex: 1;
-    text-align: left;
-    padding: 1em;
-}
 
 .loginSignUp a
 {
@@ -45,12 +32,67 @@ body
     font-size: 2em;
 }
 
+#login
+{
+    flex: 1;
+    text-align: right;
+    padding: 1em;
+}
+
+#signup
+{
+    flex: 1;
+    text-align: left;
+    padding: 1em;
+}
+
+
 .hostAndJoin
 {
     display: flex;
 }
 
-.sessions
+.hostAndJoin a
+{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: #00d971;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3em;
+    box-shadow: -.3em .3em .5em black;
+    border-radius: .5em;
+}
+
+.hostAndJoin a:hover
+{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: #00d971;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3em;
+    box-shadow: -.5em .5em .5em black;
+    border-radius: .5em;
+}
+
+.hostSession
+{
+    flex: 1;
+    background-color: #00ad5b;
+    margin: 20px;
+    text-align: center;
+}
+
+.joinSession
 {
     flex: 1;
     background-color: #00ad5b;
