@@ -1,0 +1,61 @@
+*{
+	text-align: center;
+    background-color: #00d971;
+    font-family: "Comic Sans MS";
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+h1{
+	margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+}
+
+body{
+    text-decoration: none;
+    color: white;
+	margin-left: auto;
+    margin-right: auto;
+	font-size: 1.2em;
+}
+a{
+	color: black;
+}
+
+#Submit{
+    margin-top: 1%;
+    margin-bottom: 2%;
+    background-color: #00d971;
+    border: none;
+    color: white;
+    padding: .1em .2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    box-shadow: -.1em .1em .2em black;
+    border-radius: .2em;
+}
+#Submit:hover{
+    margin-top: 1%;
+    margin-bottom: 2%;
+    background-color: #00ad5b;
+    border: none;
+    color: white;
+    padding: .1em .2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    box-shadow: -.125em .175em .175em black;
+    border-radius: .3em;
+}
