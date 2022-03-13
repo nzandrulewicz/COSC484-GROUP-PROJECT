@@ -1,0 +1,60 @@
+* {
+    background-color: #00d971;
+    font-family: "Comic Sans MS";
+    color: white;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#logo
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #00ad5b;
+}
+
+#signupInfo {
+    border: 0;
+}
+
+#submit{
+    margin-top: 1%;
+    margin-bottom: 2%;
+    background-color: #00d971;
+    border: none;
+    color: white;
+    padding: .1em .2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    box-shadow: -.1em .1em .2em black;
+    border-radius: .2em;
+}
+
+#submit:hover{
+    margin-top: 1%;
+    margin-bottom: 2%;
+    background-color: #00ad5b;
+    border: none;
+    color: white;
+    padding: .1em .2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    box-shadow: -.125em .175em .175em black;
+    border-radius: .3em;
+}
