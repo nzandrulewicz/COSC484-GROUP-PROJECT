@@ -7,8 +7,7 @@
     margin-left: auto;
 }
 
-#logo
-{
+#logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -29,7 +28,7 @@ a:hover {
     border: 0;
 }
 
-#submit{
+#submit {
     margin-top: 1%;
     margin-bottom: 2%;
     background-color: #00d971;
@@ -44,7 +43,7 @@ a:hover {
     border-radius: .2em;
 }
 
-#submit:hover{
+#submit:hover {
     margin-top: 1%;
     margin-bottom: 2%;
     background-color: #00ad5b;
