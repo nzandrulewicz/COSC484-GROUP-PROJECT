@@ -3,12 +3,14 @@
     <title>Sign Up for Quest Ants</title>
     <meta charset = "utf-8">
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="signupStyle.css">
     </head>
     <body>
-        <h1> QuestAnts </h1> 
-        <fieldset>
-            <legend>Sign Up Below</legend>
+        <img src="logo.png" id="logo">
+        <h1>Sign Up</h1>
+        <fieldset id="signupInfo">
+            <legend>Fill in the information below to sign up. If you already have an account, go to the <a href="login.html"> login page</a>.</legend>
+            <br>
             <form method="GET" name="signUpForm" onsubmit="return validateForm()" action="home.html">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required/><br><br>
@@ -22,7 +24,7 @@
                 <label for="confirmPassw"> Verify Password</label>
                 <input type="password" id="confirmPassw" name="vpsw" required/><br><br>
 
-                <input type="submit" name="submit"/>
+                <input type="submit" id="submit" name="submit"/>
             </form>
         </fieldset>
         <script type="text/javascript">
@@ -36,6 +38,15 @@
                 }
                 else if (u.length > 25) {
                     alert("Username must be less than 26 characters long.");
+                    return false;
+                }
+
+                if(p1.length < 8) {
+                    alert("Password must be at least 8 characters long.");
+                }
+
+                if(!p1.includes("!" || "?" || "@" || "#" || "$" || "%" || "^" || "&" || "*" || "(" || ")" || "-" || "_" || "+" || "=" || "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0")) {
+                    alert("Password must contain a number and a special character.");
                     return false;
                 }
 
