@@ -1,28 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+    <title>Sign Up for Quest Ants</title>
+    <meta charset = "utf-8">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sign Up</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="signupStyle.css">
     </head>
     <body>
+         <a href="index.html"><img src="logo.png" id="logo"></a>
         <h1>Sign Up</h1>
-        <form class="container" method="post" action="/">
-            <legend>Fill in the information below to sign up. If you already have an account, go to the <a href="#login.html">login page</a>.</legend>
-            <div class="formGroup">
+        <fieldset id="signupInfo">
+            <legend>Fill in the information below to sign up. If you already have an account, go to the <a href="login.html">login page</a>.</legend>
+            <br>
+            <form method="GET" name="signUpForm" onsubmit="return validateForm()" action="home.html">
                 <label for="email">Email</label>
-                <input id="email" name="email" type="text">
-            </div> 
-            <div class="formGroup">
+                <input type="email" id="email" name="email" required/><br><br>
+
                 <label for="username">Username</label>
-                <input id="username" name="username" type="text">
-            </div> 
-            <div class="formGroup">
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password">
-            </div> 
-            <input type="submit" id="submit" name="submit"/>
-        </form>
+                <input type="text" id="usrname" name="usrname" required/><br><br>
+          
+                <label for="passw">Password</label>
+                <input type="password" id="passw" name="psw" required/><br><br>
+              
+                <label for="confirmPassw"> Verify Password</label>
+                <input type="password" id="confirmPassw" name="vpsw" required/><br><br>
+
+                <input type="submit" id="submit" name="submit"/>
+            </form>
+        </fieldset>
+        <script type="text/javascript">
+            function validateForm() {
+                var u = document.forms["signUpForm"]["usrname"].value;
+                var p1 = document.forms["signUpForm"]["psw"].value;
+                var p2 = document.forms["signUpForm"]["vpsw"].value;
+                if (u.length < 5) {
+                    alert("Username must be at least 5 characters long.");
+                    return false;
+                }
+                else if (u.length > 25) {
+                    alert("Username must be less than 26 characters long.");
+                    return false;
+                }
+
+                if(p1.length < 8) {
+                    alert("Password must be at least 8 characters long.");
+                }
+
+                if(!p1.includes("!" || "?" || "@" || "#" || "$" || "%" || "^" || "&" || "*" || "(" || ")" || "-" || "_" || "+" || "=" || "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0")) {
+                    alert("Password must contain a number and a special character.");
+                    return false;
+                }
+
+                if (p1 != p2) {
+                    alert("Ensure passwords match.");
+                    return false;
+                }
+            }
+        </script>
     </body>
 </html>
