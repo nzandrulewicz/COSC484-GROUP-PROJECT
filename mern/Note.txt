@@ -1,0 +1,4 @@
+The files in this "mern" directory establishes a connection, but leads to a blank, white screen when there should be a login and sign up form.
+The link below is the video I used to develop the code in the directory.
+
+https://www.youtube.com/watch?v=HGgyd1bYWsE&t=286s
