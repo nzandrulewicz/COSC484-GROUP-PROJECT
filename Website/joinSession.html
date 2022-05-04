@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Join Session for Quest Ants</title>
+    <meta charset = "utf-8">
+    <head>
+        <link rel="stylesheet" href="joinSessionStyle.css">
+    </head>
+    <body>
+        <img src="logo.png" id="logo">
+        <h1>Join Session</h1>
+        <fieldset id="joinSessionInfo">
+            <legend>Enter the session name and ID to join a session. If you have not signed in yet, go to the <a href="login.html">login page</a>.</legend>
+            <br>
+            <form method="GET" name="join" onsubmit="return validateForm()" action="dashboard.html"> <!--Fix once the dashboard is finished-->
+                <label for="name">Session Name</label>
+                <input type="text" id="sessionName" name="sessionName" required/><br><br>
+
+                <label for="id">Session ID</label>
+                <input type="text" id="sessionId" name="sessionId" required/><br><br>
+
+                <input type="submit" id="submit" name="submit"/>
+            </form>
+        </fieldset>
+        <script type="text/javascript">
+            function validateForm() {
+                var name = document.forms["join"]["sessionName"].value;
+                var id = document.forms["join"]["sessionId"].value;
+                if (name.length < 3) {
+                    alert("Session name must be at least 3 characters.");
+                    return false;
+                }
+                else if (u.length > 15) {
+                    alert("Session name must be less than 16 characters.");
+                    return false;
+                }
+
+                if(id.length < 6) {
+                    alert("Session ID must be at least 5 characters.");
+                    return false;
+                }
+                else if(id.length > 10) {
+                    alert("Session ID must be less than 11 characters.");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
