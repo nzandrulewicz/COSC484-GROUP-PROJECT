@@ -19,11 +19,18 @@ function Header() {
         <header className='header'>
             <ul>
                 {user ? (
+                <>
                 <li>
                     <button className='btn' onClick={onLogout}>
                         <FaSignOutAlt /> Logout
                     </button>
                 </li>
+                <li>
+                    <Link to ='/home'>
+                        <img src="../images/logo.png"/>
+                    </Link>
+                </li>
+                </>
                 ) : (
                 <>
                 <li>
@@ -34,6 +41,11 @@ function Header() {
                 <li>
                     <Link to ='/register'>
                         <FaUser /> Register
+                    </Link>
+                </li>
+                <li>
+                    <Link to ='/home'>
+                        <img src="../images/logo.png"/>
                     </Link>
                 </li>
                 </>)}

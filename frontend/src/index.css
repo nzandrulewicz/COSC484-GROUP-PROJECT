@@ -78,6 +78,11 @@ h3 {
 }
 
 .heading {
+  margin: auto;
+  width: 75%;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: rgb(238, 255, 0);
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 50px;
@@ -85,6 +90,7 @@ h3 {
 }
 
 .heading p {
+  font-size: 20px;
   color: #828282;
 }
 
@@ -116,14 +122,26 @@ h3 {
 }
 
 .form-group button {
-  padding: 10px;
-  background-color: #747474;
-  border: 1px solid #000;
-  color: rgb(255, 255, 255);
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  background: #000;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 28px;
+  padding: 2px 2px;
+  text-align:center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
 }
 
 .form-group button:hover {
-  transform: scale(0.98);
+    color: #000;
+    background: rgb(0, 195, 221);
 }
 
 .btn {
@@ -132,7 +150,7 @@ h3 {
   border-radius: 5px;
   background: #000;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   text-align: center;
@@ -152,12 +170,13 @@ h3 {
 }
 
 .btn-block {
-  width: 100%;
+  width: 40%;
   margin-bottom: 20px;
+
 }
 
 .btn:hover {
-  transform: scale(0.98);
+  transform: scale(0.97);
 }
 
 .loadingSpinnerContainer {
@@ -181,6 +200,42 @@ h3 {
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }
+.todo {
+  margin: auto;
+  width: 65%;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: rgb(21, 247, 255);
+  padding: 7px 3px;
+}
+
+.todo button {
+
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  background: #000;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 28px;
+  padding: 2px 2px;
+  text-align:center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+.todo button:hover{
+
+    color: #000;
+    background: rgb(0, 168, 70);
+}
+
+
 
 @keyframes spin {
   0% {

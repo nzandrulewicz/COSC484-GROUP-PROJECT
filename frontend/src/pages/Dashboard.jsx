@@ -42,8 +42,9 @@ function Dashboard() {
   return (
     <>
       <section className='heading'>
-        <h1>Welcome {user && user.name}</h1>
-        <p>Todos Dashboard</p>
+        <h2>Welcome to Your Quest</h2>
+        <h1>{user && user.username}</h1>
+        <p>Quest Dashboard</p>
       </section>
 
       <TodoForm />
@@ -56,7 +57,7 @@ function Dashboard() {
               ))}
             </div>
           ) : (
-            <h3>You have not set any todos</h3>
+            <h3>No Todos. Start Your Quest!</h3>
           )}
       </section>
 

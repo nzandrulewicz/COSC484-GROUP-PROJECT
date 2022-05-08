@@ -9,7 +9,7 @@ function TodoItem({ todo }) {
       <div>{new Date(todo.createdAt).toLocaleString('en-US')}</div>
       <h2>{todo.text}</h2>
       <button onClick={() => dispatch(deleteTodo(todo._id))} className='close'>
-        X
+        Delete
       </button>
     </div>
   )

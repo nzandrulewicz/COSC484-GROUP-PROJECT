@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       <section className='heading'>
-        <img src="../images/logo.png"/>
+        
       </section>
 
       <section className='content'>
