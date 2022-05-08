@@ -15,7 +15,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
 
-//app.use('/api/signup', require('./routes/signupRoutes'))
+app.use('/api/todos', require('./routes/todoRoutes'))
 app.use('/api/users', require('./routes/userRoutes'))
 
 // Srever frontend
