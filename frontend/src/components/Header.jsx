@@ -30,6 +30,11 @@ function Header() {
                         <img src="../images/logo.png"/>
                     </Link>
                 </li>
+                <li>
+                    <Link to ='/'>
+                        Dashboard
+                    </Link>
+                </li>
                 </>
                 ) : (
                 <>
